@@ -7,7 +7,7 @@
 <meta name="description" content="Pizza 64, pizzeria artisanale à Cambo-les-Bains (Pays Basque). Pizzas façonnées à la main, à emporter. 50 avenue d'Espagne. 06 89 99 91 04." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,900;1,9..144,500&family=Hanken+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --cream:#f4eadc;
@@ -60,7 +60,7 @@
   nav.scrolled{box-shadow:0 10px 30px -18px rgba(60,18,12,.4)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:16px 26px;max-width:1180px;margin:0 auto;transition:padding .35s}
   nav.scrolled .nav-inner{padding:11px 26px}
-  .brand{display:flex;align-items:center;gap:11px;font-family:"Fraunces";font-weight:900;font-size:1.35rem;color:var(--burgundy);letter-spacing:.5px;text-decoration:none}
+  .brand{display:flex;align-items:center;gap:11px;font-family:"Baloo 2",cursive;font-weight:800;font-size:1.5rem;color:var(--burgundy);letter-spacing:0;text-decoration:none}
   .brand .badge{
     width:34px;height:34px;border-radius:50%;border:2px solid var(--burgundy);
     display:grid;place-items:center;font-size:.85rem;font-weight:900;
@@ -112,10 +112,14 @@
   }
   .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--terracotta)}
   h1.title{
-    font-weight:900;line-height:.92;margin:22px 0 8px;letter-spacing:-1px;
-    font-size:clamp(3.6rem,12vw,7.6rem);color:var(--burgundy);
+    font-family:"Baloo 2",cursive;
+    font-weight:800;line-height:.92;margin:20px 0 10px;letter-spacing:-1px;
+    font-size:clamp(4rem,14vw,8.4rem);color:var(--burgundy);
   }
-  h1.title span{display:block;color:var(--ink);font-style:italic;font-weight:500;font-size:.34em;letter-spacing:0;margin-top:6px}
+  h1.title span{
+    display:block;font-family:"Fraunces",serif;color:var(--ink);font-style:italic;font-weight:500;
+    font-size:.2em;letter-spacing:.5px;margin-top:6px;text-transform:none;
+  }
   .hero-tag{font-family:"Fraunces";font-style:italic;font-size:clamp(1.15rem,2.6vw,1.5rem);color:var(--ink-soft);max-width:30ch;margin-bottom:30px}
   .hero-cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
   .btn{
@@ -175,7 +179,12 @@
   .search input:focus{border-color:var(--burgundy);width:260px}
   .search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);opacity:.5}
 
+  .view-toggle{display:flex;gap:4px;background:var(--paper);padding:5px;border-radius:44px;border:1px solid var(--line)}
+  .view-toggle button{border:none;background:none;cursor:pointer;width:38px;height:34px;border-radius:30px;display:grid;place-items:center;color:var(--ink-soft);transition:.2s}
+  .view-toggle button.active{background:var(--burgundy);color:var(--cream)}
+
   .menu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 50px}
+  .menu-grid.one-col{grid-template-columns:1fr;gap:0 0}
   .item{
     display:flex;align-items:flex-start;gap:14px;padding:18px 4px;border-bottom:1px dashed var(--line);
     opacity:0;transform:translateY(14px);animation:rise .55s forwards;
@@ -186,6 +195,7 @@
   .item-top{display:flex;align-items:baseline;gap:10px;justify-content:space-between}
   .item h3{font-family:"Fraunces";font-weight:600;font-size:1.28rem;color:var(--ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
   .star{font-size:.62rem;background:var(--gold);color:var(--burgundy-deep);font-family:"JetBrains Mono";font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.05em;text-transform:uppercase}
+  .veg{font-size:.6rem;background:rgba(84,99,47,.16);color:var(--basil);font-family:"JetBrains Mono";font-weight:700;padding:2px 8px;border-radius:20px;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
   .dots{flex:1;border-bottom:2px dotted var(--line);min-width:18px;transform:translateY(-4px)}
   .price{font-family:"JetBrains Mono";font-weight:700;font-size:1.12rem;color:var(--burgundy);white-space:nowrap}
   .price::after{content:"€";font-size:.78em;margin-left:1px;opacity:.7}
@@ -222,7 +232,7 @@
 
   /* ---------- FOOTER ---------- */
   footer{background:#1d1510;color:rgba(244,234,220,.7);padding:50px 0 30px;text-align:center}
-  .foot-brand{font-family:"Fraunces";font-weight:900;font-size:2rem;color:var(--gold);margin-bottom:8px}
+  .foot-brand{font-family:"Baloo 2",cursive;font-weight:800;font-size:2.3rem;color:var(--gold);letter-spacing:0;margin-bottom:8px}
   footer .loc{font-style:italic;font-family:"Fraunces";margin-bottom:20px}
   .foot-line{font-size:.8rem;opacity:.6;margin-top:20px;border-top:1px solid rgba(255,255,255,.08);padding-top:20px}
 
@@ -241,14 +251,38 @@
     .burger.x span:nth-child(2){opacity:0}
     .burger.x span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
     .about-grid,.info-grid{grid-template-columns:1fr;gap:40px}
-    .menu-grid{grid-template-columns:1fr;gap:0 0}
-    .hero-disc{opacity:.35;right:-220px}
+    .menu-grid{gap:14px 30px}
+    .hero-disc{opacity:.32;right:-220px}
   }
-  @media(max-width:480px){
-    .feature-cards{grid-template-columns:1fr}
-    .hero-meta{gap:18px}
+  @media(max-width:600px){
+    .wrap{padding:0 18px}
+    .nav-inner{padding:13px 18px}
+    header.hero{padding:48px 0 56px}
+    h1.title{font-size:clamp(3rem,16vw,4.6rem)}
+    .hero-tag{font-size:1.1rem;margin-bottom:24px}
+    .hero-cta{flex-direction:column;align-items:stretch}
+    .btn{justify-content:center;width:100%}
+    .hero-meta{gap:14px 22px;margin-top:30px}
+    .hero-disc{opacity:.18;right:-46%;width:90vw}
+    .controls{gap:10px}
+    .filters{width:100%;justify-content:center}
+    .filters button{flex:1;padding:10px 10px;font-size:.86rem}
+    .search{order:3;width:100%}
     .search input,.search input:focus{width:100%}
-    .search{width:100%}
+    .view-toggle{order:2}
+    .menu-grid,.menu-grid.one-col{grid-template-columns:1fr;gap:0}
+    .menu{padding:40px 0 60px}
+    .item{padding:16px 2px}
+    .item h3{font-size:1.18rem}
+    .ingredients{font-size:.88rem}
+    .hours-card{padding:28px 24px}
+    .info{padding:60px 0}
+    .feature-cards{grid-template-columns:1fr}
+    .menu-grid{grid-template-columns:1fr 1fr;gap:10px 16px}
+    .menu-grid.one-col{grid-template-columns:1fr}
+    .menu-grid:not(.one-col) .item h3{font-size:1rem}
+    .menu-grid:not(.one-col) .ingredients{font-size:.78rem}
+    .menu-grid:not(.one-col) .dots{display:none}
   }
 </style>
 </head>
@@ -272,29 +306,20 @@
   <div class="hero-disc"></div>
   <div class="wrap">
     <div class="hero-inner">
-      <span class="eyebrow">Fabrication artisanale · Pays Basque</span>
-      <h1 class="title">Pizza 64<span>façonnée à la main, à Cambo-les-Bains</span></h1>
-      <p class="hero-tag">Pâte travaillée maison, garnitures généreuses et quelques spécialités d'ici. Du tomate, du crème, et tout le caractère du 64.</p>
+      <span class="eyebrow">Pizzeria artisanale · Pays Basque</span>
+      <h1 class="title">Pizza 64<span>Cambo-les-Bains</span></h1>
+      <p class="hero-tag">Pizzas façonnées à la main, à emporter.</p>
       <div class="hero-cta">
         <a href="#menu" class="btn btn-primary">Voir la carte →</a>
         <a href="tel:+33689999104" class="btn btn-ghost">Commander · 06 89 99 91 04</a>
       </div>
       <div class="hero-meta">
         <div><span class="k">Adresse</span><span class="v">50 av. d'Espagne, 64250</span></div>
-        <div><span class="k">Horaires</span><span class="v">Mar.–Dim. · 18h–22h</span></div>
-        <div><span class="k">Format</span><span class="v">À emporter</span></div>
+        <div><span class="k">Horaires</span><span class="v">Mar.–Ven. · 18h–22h</span></div>
       </div>
     </div>
   </div>
 </header>
-
-<!-- MARQUEE -->
-<div class="strip" aria-hidden="true">
-  <div class="marquee">
-    <span>Pâte maison</span><span>Façonnée à la main</span><span>23 pizzas</span><span>Spécialités basques</span><span>Produits frais</span>
-    <span>Pâte maison</span><span>Façonnée à la main</span><span>23 pizzas</span><span>Spécialités basques</span><span>Produits frais</span>
-  </div>
-</div>
 
 <!-- MENU -->
 <section class="menu" id="menu">
@@ -315,10 +340,18 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
         <input type="text" id="search" placeholder="Un ingrédient ? (chorizo, miel…)" />
       </div>
+      <div class="view-toggle" id="viewToggle" role="group" aria-label="Affichage">
+        <button data-v="1" aria-label="Une pizza par ligne">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="5" width="18" height="5" rx="1.5"/><rect x="3" y="14" width="18" height="5" rx="1.5"/></svg>
+        </button>
+        <button class="active" data-v="2" aria-label="Deux pizzas par ligne">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><rect x="3" y="4" width="7.5" height="16" rx="1.5"/><rect x="13.5" y="4" width="7.5" height="16" rx="1.5"/></svg>
+        </button>
+      </div>
     </div>
 
     <div class="menu-grid" id="menuGrid"></div>
-    <p class="menu-note">★ Spécialité = recette signature de Pizza 64. Allergènes : nous demander en commandant.</p>
+    <p class="menu-note">🌿 Végé = sans viande ni poisson. Allergènes : n'hésitez pas à nous demander en commandant.</p>
   </div>
 </section>
 
@@ -352,8 +385,8 @@
       <div class="day-row open"><span class="day">Mercredi</span><span class="h">18h – 22h</span></div>
       <div class="day-row open"><span class="day">Jeudi</span><span class="h">18h – 22h</span></div>
       <div class="day-row open"><span class="day">Vendredi</span><span class="h">18h – 22h</span></div>
-      <div class="day-row open"><span class="day">Samedi</span><span class="h">18h – 22h</span></div>
-      <div class="day-row open"><span class="day">Dimanche</span><span class="h">18h – 22h</span></div>
+      <div class="day-row closed"><span class="day">Samedi</span><span class="h">Fermé</span></div>
+      <div class="day-row closed"><span class="day">Dimanche</span><span class="h">Fermé</span></div>
       <a href="tel:+33689999104" class="order-btn">📞 Appeler pour commander</a>
     </div>
   </div>
@@ -377,16 +410,16 @@
 const pizzas = [
   {n:"Margherita", b:"tomate", i:"Sauce tomate, fromage, jambon, olives", p:11},
   {n:"Thon", b:"tomate", i:"Sauce tomate, fromage, thon, poivrons, olives", p:12},
-  {n:"Chèvre", b:"creme", i:"Crème fraîche, fromage, chèvre, miel, olives", p:12},
+  {n:"Chèvre", b:"creme", i:"Crème fraîche, fromage, chèvre, miel, olives", p:12, veg:true},
   {n:"Regina", b:"tomate", i:"Sauce tomate, fromage, jambon, champignons, olives", p:12},
   {n:"Calzone", b:"creme", i:"Crème fraîche, fromage, jambon, champignons, œuf", p:13},
   {n:"Bolognaise", b:"tomate", i:"Sauce tomate, fromage, viande hachée de bœuf, oignons, poivrons, olives", p:13},
   {n:"Kebab", b:"tomate", i:"Sauce tomate, sauce blanche, fromage, viande kebab, oignon, poivrons, olives", p:13},
-  {n:"Pizza 4 fromages", b:"tomate", i:"Sauce tomate, fromage, roquefort, chèvre, emmental", p:13},
+  {n:"Pizza 4 fromages", b:"tomate", i:"Sauce tomate, fromage, roquefort, chèvre, emmental", p:13, veg:true},
   {n:"Chorizo", b:"tomate", i:"Sauce tomate, fromage, chorizo, poivrons grillés, tomates séchées, olives", p:13},
   {n:"Savoyarde", b:"creme", i:"Crème fraîche, fromage, lardons, raclette, pomme de terre", p:13},
   {n:"Provençale", b:"tomate", i:"Sauce tomate, fromage, anchois, poivrons, olives", p:12},
-  {n:"4 Saisons", b:"tomate", i:"Sauce tomate, fromage, cœur d'artichaut, champignons, oignons, poivrons, olives", p:12},
+  {n:"4 Saisons", b:"tomate", i:"Sauce tomate, fromage, cœur d'artichaut, champignons, oignons, poivrons, olives", p:12, veg:true},
   {n:"Saumon", b:"creme", i:"Crème fraîche, fromage, saumon, roquette, olives", p:14},
   {n:"Poulet Curry", b:"creme", i:"Crème fraîche, fromage, poulet au curry, champignons, olives", p:13},
   {n:"Poulet Exotique", b:"creme", i:"Crème fraîche, fromage, poulet, ananas, olives", p:13},
@@ -395,7 +428,7 @@ const pizzas = [
   {n:"Etxe", b:"tomate", i:"Sauce tomate, fromage, chorizo, jambon, chèvre, œuf, tomates séchées, olives", p:14, star:true},
   {n:"Oriental", b:"tomate", i:"Sauce tomate, fromage, merguez, poivrons, œuf, olives", p:13},
   {n:"Serrano", b:"creme", i:"Crème fraîche, fromage, chèvre, jambon serrano, roquette, miel, olives", p:13},
-  {n:"Roma", b:"creme", i:"Crème fraîche, fromage, gorgonzola, noix, olives", p:13},
+  {n:"Roma", b:"creme", i:"Crème fraîche, fromage, gorgonzola, noix, olives", p:13, veg:true},
   {n:"Hawaïenne", b:"creme", i:"Crème fraîche, fromage, jambon, ananas, olives", p:13},
   {n:"Royale", b:"tomate", i:"Sauce tomate, fromage, jambon, champignons, œuf, olives", p:13}
 ];
@@ -423,7 +456,7 @@ function render(){
     el.innerHTML = `
       <div class="item-body">
         <div class="item-top">
-          <h3>${p.n}${p.star?'<span class="star">★ Spécialité</span>':''}</h3>
+          <h3>${p.n}${p.veg?'<span class="veg" title="Végétarienne" aria-label="Végétarienne">🌿 Végé</span>':''}</h3>
           <span class="dots"></span>
           <span class="price">${p.p}</span>
         </div>
@@ -441,6 +474,18 @@ document.getElementById('filters').addEventListener('click', e=>{
   b.classList.add('active'); curFilter = b.dataset.f; render();
 });
 document.getElementById('search').addEventListener('input', e=>{ curSearch = e.target.value; render(); });
+
+/* ---------- VIEW TOGGLE (1 / 2 colonnes) ---------- */
+const viewToggle = document.getElementById('viewToggle');
+function setView(v){
+  document.querySelectorAll('#viewToggle button').forEach(x=>x.classList.toggle('active', x.dataset.v===v));
+  grid.classList.toggle('one-col', v==='1');
+}
+if(window.matchMedia('(max-width:600px)').matches){ setView('1'); }
+viewToggle.addEventListener('click', e=>{
+  const b = e.target.closest('button'); if(!b) return;
+  setView(b.dataset.v);
+});
 
 /* ---------- NAV ---------- */
 const nav = document.getElementById('nav');
